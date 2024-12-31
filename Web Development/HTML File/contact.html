@@ -1,0 +1,536 @@
+<html>
+
+<head>
+
+  <title>Contact</title>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gwendolyn:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  body {
+
+    background-image: url('img5.jpg');
+    background-repeat: no-repeat;
+    background-size: 1920px 2080px;
+
+  }
+
+  nav {
+    overflow: visible;
+    /* Changed from hidden to visible */
+    border: 5px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 50px;
+
+  }
+
+  .nav-center {
+    margin-left: 50%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    /* Added alignment */
+  }
+
+  .nav-right {
+
+    display: flex;
+
+  }
+
+  .nav-center a,
+  .nav-right a {
+    color: rgb(10, 10, 10);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: 'Dancing Script';
+    font-size: 30px;
+    display: flex;
+    /* Added display block */
+    position: relative;
+  }
+
+  .nav-center a::after,
+  .nav-right a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    /* Adjust the position to place the line under the text */
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    /* Color of the line */
+    transition: width 0.3s ease-in-out;
+    /* Smooth animation for the line */
+  }
+
+  .nav-center a:hover::after,
+  .nav-right a:hover::after {
+    width: 100%;
+    /* The line expands fully on hover */
+  }
+
+
+
+  .logocontainer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: -70px;
+
+  }
+
+  #logo {
+    height: 70px;
+    width: 70px;
+    margin-right: 10px;
+  }
+
+  #firstheader {
+    font-family: 'Gwendolyn';
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  #image {
+    display: block;
+    width: 700px;
+    height: 550px;
+
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left: 50%;
+    margin-top: -20%;
+  }
+
+  .error {
+    color: red;
+  }
+
+  .container2 {
+    background-image: url('img4.jpg');
+    border: 1px solid black;
+    width: 400px;
+    height: 550px;
+    margin-left: 50%;
+    margin-top: -35%;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    line-height: 25px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 1.5px rgba(0, 0, 0, 0.75);
+    font-family: 'Times New Roman';
+  }
+
+  form {
+    display: block;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+    height: 90%;
+    margin-top: -10%;
+    backdrop-filter: brightness(50%);
+    flex-direction: column;
+    display: flex;
+    gap: 1px;
+
+  }
+
+  h1 {
+    font-weight: normal;
+    font-size: 27px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 60px;
+    color: black;
+  }
+
+  label {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+
+  }
+
+  input,
+  textarea {
+    background: rgba(255, 255, 255, 0.3);
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  button {
+
+    border: none;
+    background: rgb(45, 126, 231);
+    border-radius: 40px;
+    line-height: 40px;
+    height: 40px;
+    margin: 10px 0px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+
+  button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #b3b3ff;
+  }
+
+  .contains1 {
+    border: 1px solid rgb(97, 96, 96);
+    border-radius: 20px;
+    width: 30%;
+    height: 45%;
+    margin-top: 5%;
+    margin-left: 10%;
+    text-align: center;
+    box-shadow: 0px 0px 20px 1.5px rgba(0, 0, 0, 0.75);
+  }
+
+  .links {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 2%;
+  }
+
+  .face {
+    margin-left: 10px;
+    display: inline-block;
+    width: 30px;
+  }
+
+  #text {
+    font-family: 'Rubaile';
+    color: black;
+    font-size: 40px;
+    font-weight: lighter;
+    margin-left: 10%;
+  }
+
+
+
+
+  /* Footer Styling */
+
+
+  footer {
+    background-color: #000;
+    padding: 40px 20px;
+    margin-top: 10%;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer-column {
+    flex: 1 1 200px;
+    margin: 10px;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .footer-column p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+  }
+
+  .footer-column ul {
+    list-style: none;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+
+  .footer-column ul li a:hover {
+    color: #fff;
+  }
+
+  .footer-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .footer-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e91e63;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s;
+    margin-top: 10%;
+    margin-left: 20%;
+  }
+
+  .footer-btn:hover {
+    background: #c2185b;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .footer-social img {
+    width: 35px;
+    /* Set width */
+    height: 35px;
+    /* Set height (equal to width for a square) */
+    border-radius: 50%;
+    /* Makes it circular */
+    object-fit: cover;
+    /* Crops the image to fit within the circle */
+    display: inline-block;
+    /* Ensures proper alignment */
+    margin: 0 10px;
+    /* Adds spacing between the icons */
+    border: 2px solid #fff;
+    /* Optional: Add a border around the image for a polished look */
+    overflow: hidden;
+    /* Ensures any overflow is hidden */
+  }
+
+  .map-container {
+    width: 80%;
+    height: 60vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 16%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+<body>
+  <nav>
+    <div class="nav-center">
+      <a href="Firstpage.html">Home</a>
+      <a href="Services.html">Services</a>
+      <a href="Package.html">Packages</a>
+      <a href="Gallery.html">Gallery</a>
+
+      <a href="Contact.html">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="Booking.html">Booking</a>
+    </div>
+  </nav>
+
+  <div class="logocontainer">
+    <img src="logo.png" alt="logoshere" id="logo">
+    <h1 id="firstheader">Hike Space</h1>
+  </div><br>
+
+
+  <h2 id="text"> Get In Touch </h2>
+  <p style="font-family:'Montserrat'; font-size:30px; margin-top:-1%; margin-left:10%;">"Embark on Adventures,<br> Discover the
+    World One Journey at a Time!"
+  </p>
+
+  <div class="contains1">
+    <h3> Social Media:</h3>
+    <div class="links">
+
+      <a href="https://www.facebook.com/">
+        <img src="facebook.png" class="face" alt="Facebook">
+
+      </a>&emsp;
+      <a href="https://www.googlemap.com/">
+        <img src="instagram.png" class="face" alt="Instagram">
+
+      </a>&emsp;
+      <a href="https://www.gmail.com/">
+        <img src="gmail.png" class="face" alt="Gmail">
+
+      </a>
+    </div>
+    <h3>Address</h3>
+    <p>Thamel, Kathmandu</p>
+    <h3>Contacts</h3>
+    <p>Telephone Number: 01473562<br> Mobile Number: 9867480314<br> Email address: travelspace18@gmail.com</p>
+    <h3>Office Hours</h3>
+    <p>Sun-Mon : 10 AM to 7 PM<br> Sat : Closed</p>
+
+  </div>
+  <div class="container2">
+    <h1 align="center">Contact Us For Any Query</h1>
+    <form action="inquerymessage.php" method="POST" onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      <span id="nameError" class="error"></span>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email">
+      <span id="emailError" class="error"></span>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea>
+      <span id="messageError" class="error"></span>
+
+      <br>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+  <script>
+    function validateForm() {
+      var isValid = true;
+
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      // Reset error messages
+      document.getElementById("nameError").innerHTML = "";
+      document.getElementById("emailError").innerHTML = "";
+      document.getElementById("messageError").innerHTML = "";
+
+      // Validate name
+      if (name === "") {
+        document.getElementById("nameError").innerHTML = "Name is required";
+        isValid = false;
+      }
+
+      // Validate email
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if (email === "") {
+        document.getElementById("emailError").innerHTML = "Email is required";
+        isValid = false;
+      } else if (!emailPattern.test(email)) {
+        document.getElementById("emailError").innerHTML = "Invalid email format";
+        isValid = false;
+      }
+
+      // Validate message
+      if (message === "") {
+        document.getElementById("messageError").innerHTML = "Message is required";
+        isValid = false;
+      } else if (message.length < 10) {
+        document.getElementById("messageError").innerHTML = "Message must be at least 10 characters long";
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert("Your message has been sent!");
+      }
+
+      return isValid;
+    }
+  </script>
+
+  <div class="map-container">
+    <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4967252896573!2d85.3386057!3d27.7455263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a7846ae157d%3A0x8f07c7f2a5d7b54c!2s27%C2%B044&#39;45.0%22N%2085%C2%B020&#39;22.6%22E!5e0!3m2!1sen!2snp!4v1700035627268!5m2!1sen!2snp"
+    width="100%"
+    height="100%"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+  ></iframe>
+  </div>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Travel Space</h3>
+        <p>A travel space is an online platform offering
+          travel planning, bookings, destination guides, and personalized trip options, with features like interactive
+          maps, secure payments, reviews, and travel tips for a seamless experience.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul type="bullet">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Packages</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>More Links</h3>
+        <ul type="bullet">
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Hotel Reservation</a></li>
+          <li><a href="#">Guides</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Partners</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#"><img src="facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="google.png" alt="Google"></a>
+          <a href="#"><img src="instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="twitter.png" alt="Twitter"></a>
+        </div>
+        <a href="#" class="footer-btn">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2019-2020 All Rights Reserved.
+    </div>
+  </footer>
+</body>
+
+</html>

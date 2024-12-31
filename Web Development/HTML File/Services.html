@@ -1,0 +1,445 @@
+<html>
+<head>
+
+<title>Services</title>
+ <!-- Favicon -->
+ <link href="img/favicon.ico" rel="icon">
+
+ <!-- Google Web Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+ <!-- Icon Font Stylesheet -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+ <!-- Libraries Stylesheet -->
+ <link href="lib/animate/animate.min.css" rel="stylesheet">
+ <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+ <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+ <!-- Customized Bootstrap Stylesheet -->
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gwendolyn:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+ 
+      
+      nav {
+        overflow: visible; /* Changed from hidden to visible */
+        border: 5px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        margin-top: 50px;
+       
+      }
+    
+      .nav-center {
+        margin-left: 50%;
+        display: flex;
+        position: relative;
+        align-items: center; /* Added alignment */
+        font-size: 10px;
+      }
+    
+      .nav-right {
+       
+        display: flex;
+        font-size: 10px;
+      }
+    
+      .nav-center a,
+      .nav-right a {
+        color: rgb(10, 10, 10);
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-family: 'Dancing Script';
+        font-size: 30px;
+        display:flex; /* Added display block */
+        position: relative;
+      }
+    
+      .nav-center a::after,
+      .nav-right a::after {
+          content: '';
+          position: absolute;
+          bottom: 5px; /* Adjust the position to place the line under the text */
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background-color: black; /* Color of the line */
+          transition: width 0.3s ease-in-out; /* Smooth animation for the line */
+      }
+      
+      .nav-center a:hover::after,
+      .nav-right a:hover::after {
+          width: 100%; /* The line expands fully on hover */
+      }
+    
+
+
+.logocontainer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: -75px;
+    margin-left: 20px;
+  }
+
+  #logo {
+    height: 70px;
+    width: 70px;
+    margin-right: 10px;
+  }
+
+  #firstheader {
+    font-family: 'Gwendolyn';
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+
+
+/* Services Section Styles */
+.container {
+    background: linear-gradient(135deg, #ade7e4, #eaf7ff);
+    padding: 90px 20px;
+    border-radius: 15px;
+    width:90%;
+    height:75%;
+    align-items: center;
+    margin-left: 4%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* Service Item Styling */
+.service-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 30px;
+    text-align: center; /* Center-align text within the service item */
+    margin: 25px 0; /* Add spacing between items */
+    margin-left:20%;
+    margin-right: -40%;
+    width: 50%;
+    height:80%
+}
+
+/* Hover Effect for Service Item */
+.service-item:hover {
+    
+   
+    transform: translateY(-10px); /* Apply the translateY animation */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Icon Styling */
+.service-item i {
+    font-size: 50px;
+    color: #007bff;
+    margin-bottom: 15px;
+    transition: color 0.3s ease; /* Smooth icon color transition */
+}
+
+
+
+/* Heading Styling */
+.service-item h5 {
+    font-size: 25px;
+    font-family:'Hello Baby Karl Sans';
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+    
+}
+
+
+
+/* Paragraph Styling */
+.service-item p {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+
+
+
+
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+    text-transform: capitalize;
+}
+
+/* Responsive Adjustments for Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the service items horizontally */
+  gap: 25px;;
+}
+
+.col-lg-6, .col-md-6 {
+  width: 48%; /* Ensure 2 items per row (half width each) */
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .col-lg-6, .col-md-6 {
+      width: 100%; /* Stack items vertically on smaller screens */
+  }
+
+  .container {
+      padding: 30px 15px;
+  }
+}
+
+
+
+    /* Footer Styling */
+  
+
+    footer {
+      background-color: #000;
+      padding: 40px 20px;
+      margin-top: 10%;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+      margin: 10px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .footer-column p {
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .footer-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #e91e63;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background 0.3s;
+      margin-top: 10%;
+      margin-left: 20%;
+    }
+
+    .footer-btn:hover {
+      background: #c2185b;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .footer-social img {
+      width: 35px; /* Set width */
+      height: 35px; /* Set height (equal to width for a square) */
+      border-radius: 50%; /* Makes it circular */
+      object-fit: cover; /* Crops the image to fit within the circle */
+      display: inline-block; /* Ensures proper alignment */
+      margin: 0 10px; /* Adds spacing between the icons */
+      border: 2px solid #fff; /* Optional: Add a border around the image for a polished look */
+      overflow: hidden; /* Ensures any overflow is hidden */
+    }
+</style>
+
+<nav>
+  <div class="nav-center">
+    <a href="Firstpage.html">Home</a>
+    <a href="Services.html">Services</a>
+    <a href="Package.html">Packages</a>     
+    <a href="Gallery.html">Gallery</a>
+        
+    <a href="Contact.html">Contact</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="Booking.html">Booking</a>
+  </div>
+</nav>
+
+<div class="logocontainer">
+    <img src="logo.png" alt="logoshere" id="logo">
+    <h1 id="firstheader">Hike Space</h1>
+</div><br>
+
+    
+
+
+
+    <!-- Services Section Start -->
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 align ="center" style="margin-top:-10px; margin-top: -4%; font-weight:bold; font-family:'Rubaile';" >Our Services</h1>
+    </div>
+    <div class="row">
+        <!-- Service Item 1 -->
+        <div class="col-lg-6 col-md-6 mb-4">
+          <a href="event.html" style="text-decoration: none; color: inherit;">
+            <div class="service-item">
+                <i class="fa fa-globe"></i>
+                <h5>National Tours</h5>
+                <p>Explore Nepal with our premium travel packages.</p>
+            </div>
+          </a>
+        </div>
+        <!-- Service Item 2 -->
+        <div class="col-lg-6 col-md-6 mb-4">
+          <a href="hotel.html" style="text-decoration: none; color: inherit;">
+            <div class="service-item">
+                <i class="fa fa-hotel"></i>
+                <h5>Hotel Reservation</h5>
+                <p>Book the best hotels at the best prices.</p>
+            </div>
+          </a>
+        </div>
+        <!-- Service Item 3 -->
+        <div class="col-lg-6 col-md-6 mb-4">
+          <a href="guide.html" style="text-decoration: none; color: inherit;">
+            <div class="service-item">
+                <i class="fa fa-user"></i>
+                <h5>Travel Guides</h5>
+                <p>Experienced guides to make your journey smooth and safe.</p>
+            </div>
+          </a>
+        </div>
+        <!-- Service Item 4 -->
+        <div class="col-lg-6 col-md-6 mb-4">
+            <div class="service-item">
+                <i class="fa fa-cog"></i>
+                <h5>Event Management</h5>
+                <p>Plan and manage events effortlessly.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services Section End -->
+
+
+
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Travel Space</h3>
+      <p>A travel space is an online platform offering 
+        travel planning, bookings, destination guides, and personalized trip options, with features like interactive maps, secure payments, reviews, and travel tips for a seamless experience.
+      </p>
+    </div>
+    
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul type="bullet">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Packages</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>More Links</h3>
+      <ul type="bullet">
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Hotel Reservation</a></li>
+        <li><a href="#">Guides</a></li>
+       
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Partners</a></li>
+      </ul>
+     <div class="footer-social">
+<a href="#"><img src="facebook.png" alt="Facebook"></a>
+<a href="#"><img src="google.png" alt="Google"></a>
+<a href="#"><img src="instagram.png" alt="Instagram"></a>
+<a href="#"><img src="twitter.png" alt="Twitter"></a>
+</div>
+      <a href="#" class="footer-btn">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2019-2020 All Rights Reserved.
+  </div>
+</footer>
+</body>
+</html>
+

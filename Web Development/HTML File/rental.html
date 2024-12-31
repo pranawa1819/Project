@@ -1,0 +1,787 @@
+<html>
+<head>
+<title>rental</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gwendolyn:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  
+  body{
+   
+    background-image: url('img5.jpg');
+    background-repeat: no-repeat;
+    background-size: 1920px 7780px;
+   
+  }
+  nav {
+    overflow: visible; /* Changed from hidden to visible */
+    border: 5px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 50px;
+  
+  }
+
+  .nav-center {
+    margin-left: 50%;
+    display: flex;
+    position: relative;
+    align-items: center; /* Added alignment */
+  }
+
+  .nav-right {
+  
+    display: flex;
+  
+  }
+
+  .nav-center a,
+  .nav-right a {
+    color: rgb(10, 10, 10);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: 'Dancing Script';
+    font-size: 30px;
+    display: block; /* Added display block */
+    position: relative;
+  }
+
+  .nav-center a::after,
+  .nav-right a::after {
+      content: '';
+      position: absolute;
+      bottom: 5px; /* Adjust the position to place the line under the text */
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: black; /* Color of the line */
+      transition: width 0.3s ease-in-out; /* Smooth animation for the line */
+  }
+  
+  .nav-center a:hover::after,
+  .nav-right a:hover::after {
+      width: 100%; /* The line expands fully on hover */
+  }
+
+
+
+  .logocontainer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: -70px;
+  }
+
+  #logo {
+    height: 70px;
+    width: 70px;
+    margin-right: 10px;
+  }
+
+  #firstheader {
+    font-family: 'Gwendolyn';
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  #image {
+    display: block;
+    width: 700px;
+    height: 550px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left: 50%;
+    margin-top: -20%;
+  }
+
+  .container-car {
+    margin: 0px auto;
+    width: 20%;
+    height:70%;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Times New Roman';
+    box-shadow: 0px 0px 20px 1.5px   #626364;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.container-image-car{
+    width:37%;
+    height:80%;
+    margin-top: -37%;
+    margin-left: 45%;
+    background-image: url(img28.jpeg);
+    border-radius: 40px;
+
+}
+
+.container-jeep {
+  margin: 0px auto;
+  width: 20%;
+  height:68%;
+  background-color: antiquewhite;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Times New Roman';
+  box-shadow: 0px 0px 20px 1.5px   #657389;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.container-image-jeep{
+    width:37%;
+    height:57%;
+    margin-top: -35%;
+    margin-left: 45%;
+    background-image: url(img29.jpeg);
+    border-radius: 40px;
+
+}
+
+.container-4wd {
+    margin: 0px auto;
+    width: 20%;
+    height:68%;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Times New Roman';
+    box-shadow: 0px 0px 20px 1.5px   #657389;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+  .container-image-4wd{
+      width:40%;
+      height:57%;
+      margin-top: -35%;
+      margin-left: 45%;
+      background-image: url(img30.jpg);
+      border-radius: 40px;
+  
+  }
+
+  .container-Hiece {
+    margin: 0px auto;
+    width: 20%;
+    height:68%;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Times New Roman';
+    box-shadow: 0px 0px 20px 1.5px   #657389;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+  .container-image-Hiece{
+      width:40%;
+      height:57%;
+      margin-top: -35%;
+      margin-left: 45%;
+      background-image: url(img31.webp);
+      border-radius: 40px;
+  
+  }
+
+  .container-tourist {
+    margin: 0px auto;
+    width: 20%;
+    height:68%;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Times New Roman';
+    box-shadow: 0px 0px 20px 1.5px   #657389;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+  .container-image-tourist{
+      width:37%;
+      height:50%;
+      margin-top: -30%;
+      margin-left: 45%;
+      background-image: url(img32.jpg);
+      border-radius: 40px;
+  
+  }
+ /* Container for button */
+ .book-button-car {
+    text-align: center; /* Center-align the button */
+    margin: 50px 0;
+    margin-left: -70%;
+    margin-top: -2%;
+  }
+  .book-button-jeep {
+    text-align: center; /* Center-align the button */
+    margin: 50px 0;
+    margin-left: 45%;
+    margin-top: 1%;
+  }
+  .book-button-4wd {
+    text-align: center; /* Center-align the button */
+    margin: 50px 0;
+    margin-left: 45%;
+    margin-top: 1%;
+  }
+  .book-button-Hiece {
+    text-align: center; /* Center-align the button */
+    margin: 50px 0;
+    margin-left: 45%;
+    margin-top: 1%;
+  }
+  .book-button-tourist {
+    text-align: center; /* Center-align the button */
+    margin: 50px 0;
+    margin-left: 45%;
+    margin-top: 1%;
+  }
+  
+  /* Button Styles */
+  .button-style {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* Hover Effect */
+  .button-style:hover {
+    background-color: #f3f5f7; /* Darker blue on hover */
+    color: #0a0a0a; /* Ensures text remains readable */
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+  
+  /* Active Effect */
+  .button-style:active {
+    transform: translateY(2px); /* Button sinks slightly on click */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Restores shadow */
+  }
+
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 18px;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: #b2c2bf;
+}
+
+/* retail Section Styling */
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* retail Content Styling */
+.retail-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.section-subtitle {
+  font-size: 40px;
+  color: #0289f7;
+  margin-bottom: 10px;
+  font-family:'Rubaile';
+}
+
+.retail-text {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 10px;
+  font-family:'Rubaile';
+}
+
+/* List Styling */
+.retail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.retail-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.retail-item-content {
+  flex: 1;
+}
+
+.retail-item-title {
+  font-size:30px;
+  color: #222;
+  margin-bottom: 5px;
+  font-family:'Rubaile';
+}
+
+.retail-item-text {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  color: #555;
+  
+}
+
+/* retail Banner Styling */
+.retail-banner {
+  flex: 1;
+  max-width: 45%;
+  text-align: center;
+  margin-top: -15%;
+  
+}
+
+.retail-banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.w-100{
+  margin-left: 25%;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .retail-content, .retail-banner {
+    max-width: 100%;
+  }
+
+  .retail-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+}
+
+    /* Footer Styling */
+  
+
+    footer {
+      background-color: #000;
+      padding: 40px 20px;
+      margin-top: 10%;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+      margin: 10px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .footer-column p {
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .footer-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #e91e63;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background 0.3s;
+      margin-top: 10%;
+      margin-left: 20%;
+    }
+
+    .footer-btn:hover {
+      background: #c2185b;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .footer-social img {
+      width: 35px; /* Set width */
+      height: 35px; /* Set height (equal to width for a square) */
+      border-radius: 50%; /* Makes it circular */
+      object-fit: cover; /* Crops the image to fit within the circle */
+      display: inline-block; /* Ensures proper alignment */
+      margin: 0 10px; /* Adds spacing between the icons */
+      border: 2px solid #fff; /* Optional: Add a border around the image for a polished look */
+      overflow: hidden; /* Ensures any overflow is hidden */
+    }
+ 
+</style>
+</head>
+<body>
+  <nav>
+    <div class="nav-center">
+      <a href="Firstpage.html">Home</a>
+      <a href="Services.html">Services</a>
+      <a href="Package.html">Packages</a>     
+      <a href="Gallery.html">Gallery</a>
+          
+      <a href="Contact.html">Contact</a>
+    </div>
+  
+    <div class="nav-right">
+      <a href="Booking.html">Booking</a>
+    </div>
+  </nav>
+
+<div class="logocontainer">
+  <img src="logo.png" alt="logoshere" id="logo">
+  <h1 id="firstheader">Hike Space</h1>
+</div>
+
+
+
+
+  <div class="container">
+    <div class="retail-content">
+
+      <p class="section-subtitle">Retail Services</p>
+
+      <p class="retail-text">
+        We offer car rentals across Nepal, including Kathmandu, Pokhara, Chitwan, Lumbini, and Nagarkot.
+       Choose from a range of vehicles—A/C, non-A/C cars, jeeps, vans, buses, and more—at competitive prices, ensuring quality and convenience for all travelers.
+      </p>
+
+      <h2 class="section-title">Why Car Rental with us?</h2>
+
+      <ul class="retail-list">
+
+        <!-- Vehicle Varieties -->
+        <li class="retail-item">
+          <div class="retail-item-content">
+            <h3 class="retail-item-title">Varieties of vehicles for your group size:</h3>
+            <p class="retail-item-text">
+              We offer a range of vehicles, including cars, vans, jeeps, Toyota Hi-ace, Coasters, 4WD Jeeps, and Tourist Buses, tailored to your group size and preferences.
+            </p>
+          </div>
+        </li>
+
+        <!-- Safety and Security -->
+        <li class="retail-item">
+          <div class="retail-item-content">
+            <h3 class="retail-item-title">Safety and security:</h3>
+            <p class="retail-item-text">
+              Not only vehicles, but we also ensure the safety and security of our customers. We will manage our own professional drivers who have good experience on the roads of Nepal.
+            </p>
+          </div>
+        </li>
+
+        <!-- Comfort -->
+        <li class="retail-item">
+          <div class="retail-item-content">
+            <h3 class="retail-item-title">Comfortable:</h3>
+            <p class="retail-item-text">
+              Our vehicles are well-maintained, clean, and equipped with comfortable seating and music systems for a pleasant journey.
+            </p>
+          </div>
+        </li>
+
+        <!-- Best Prices Guarantee -->
+        <li class="retail-item">
+          <div class="retail-item-content">
+            <h3 class="retail-item-title">Best Prices Guarantee:</h3>
+            <p class="retail-item-text">
+              We have a variety of vehicles with competitively low prices. We can provide vehicles from economy models with low consumption to luxury vehicles.
+            </p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+    <figure class="retail-banner">
+      <img src="rental16.png" width="756" height="842" loading="lazy" alt=" Banner" class="w-100">
+    </figure>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+   <br><br> <br><br><h1 align="center" style= "
+   color: black;
+   font-size: 50px; font-family:'Rubaile';">Featured Vehicle</h1>
+
+   <div class="container-car">
+    <h3 align =" center" style="font-size: 23px;"><b>Car Specification:</b></h3>
+    <h4 style="font-size: 23px;"> Type:</h4>
+    <p style="font-size: 23px;"> Luxury Car </p>
+    <h4 style="font-size: 23px;"> Brand:</h4>
+    <p style="font-size: 23px;"> Totota,Ford,Swift,Dzire,Skoda,TATA </p>
+    <h4 style="font-size: 23px;"> Capacity:</h4>
+    <p style="font-size: 23px;"> 4 people(including driver)</p>
+    <h4 style="font-size: 23px;"> Services Includes:</h4>
+    <p style="font-size: 23px;">A professional driver<br>Necessary Fules<br>Parking fees<br>
+    Briver expenses<br>Government Taxes</p>
+  </div>
+  <div class="container-image-car"></div>
+  <div class="book-button-car">
+    <a href="rentalbooking.html" class="button-style">Book Now</a>
+
+  </div>
+
+
+  <div class="container-jeep">
+    <h3 align =" center" style="font-size: 23px;"><b>Jeep Specification:</b></h3>
+    <h4 style="font-size: 23px;"> Type:</h4>
+    <p style="font-size: 23px;"> Luxury Jeep</p>
+    <h4 style="font-size: 23px;"> Brand:</h4>
+    <p style="font-size: 23px;"> Totota,Mahindra </p>
+    <h4 style="font-size: 23px;"> Capacity:</h4>
+    <p style="font-size: 23px;"> 6 people(including driver)</p>
+    <h4 style="font-size: 23px;"> Services Includes:</h4>
+    <p style="font-size: 23px;">A professional driver<br>Necessary Fules<br>Parking fees<br>
+    Briver expenses<br>Government Taxes</p>
+  </div>
+  <div class="container-image-jeep"></div>
+  <div class="book-button-jeep">
+    <a href="rentalbooking.html" class="button-style">Book Now</a>
+
+  </div>
+
+
+  <div class="container-4wd">
+    <h3 align =" center" style="font-size: 23px;"><b>4WD Toyota Landcruiser:</b></h3>
+    <h4 style="font-size: 23px;"> Type:</h4>
+    <p style="font-size: 23px;"> Luxury Jeep</p>
+    <h4 style="font-size: 23px;"> Capacity:</h4>
+    <p style="font-size: 23px;"> 4 people(including driver)</p>
+    <h4 style="font-size: 23px;"> Services Includes:</h4>
+    <p style="font-size: 23px;">A professional driver<br>Necessary Fules<br>Parking fees<br>
+    Briver expenses<br>Government Taxes</p>
+  </div>
+  <div class="container-image-4wd"></div>
+  <div class="book-button-4wd">
+    <a href="rentalbooking.html" class="button-style">Book Now</a>
+
+  </div>
+
+  <div class="container-Hiece">
+    <h3 align =" center" style="font-size: 23px;"><b>Toyota Hiace:</b></h3>
+    
+    <p style="font-size: 23px;"> Seat belt in every seat.<br>Air condition service<br>Music system is available.</p>
+    <h4 style="font-size: 23px;"> Capacity:</h4>
+    <p style="font-size: 23px;"> 14 people(excluding driver)</p>
+    <h4 style="font-size: 23px;"> Services Includes:</h4>
+    <p style="font-size: 23px;">A professional driver<br>Necessary Fules<br>Parking fees<br>
+    Briver expenses<br>Government Taxes</p>
+  </div>
+  <div class="container-image-Hiece"></div>
+  <div class="book-button-Hiece">
+    <a href="rentalbooking.html" class="button-style">Book Now</a>
+
+  </div>
+
+  <div class="container-tourist">
+    <h3 align =" center" style="font-size: 23px;"><b>Tourist Bus:</b></h3>
+ 
+    <p style="font-size: 23px;"> Clean and comfortable seates.<br>Air condition and hitting system.</p>
+    <h4 style="font-size: 23px;"> Capacity:</h4>
+    <p style="font-size: 23px;"> 35 people(excluding driver)</p>
+    <h4 style="font-size: 23px;"> Services Includes:</h4>
+    <p style="font-size: 23px;">A professional driver<br>Necessary Fules<br>Parking fees<br>
+    Briver expenses<br>Government Taxes</p>
+  </div>
+  <div class="container-image-tourist"></div>
+  <div class="book-button-tourist">
+    <a href="rentalbooking.html" class="button-style">Book Now</a>
+
+  </div>
+
+ <br><br> <br><br><h1 align="center" style= "
+ color: black;
+ font-size: 50px;">Car Rental Price:</h1>
+  <table cellpadding="9px">
+    
+   <thead> 
+   <tr>  
+     <th >S.N</th>
+     <th >Available Vehicle</th>
+     <th >Rate inside kathmandu valley</th>
+     <th >Rate outside kathmandu valley</th>
+   </tr>
+   </thead>
+    <tr>
+     <td>1</td>
+     <td>Car</td>
+     <td>Rs.2000 for full day</td>
+     <td>Rs.3500 for full day</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Van</td>
+        <td>Rs.2600for full day</td>
+        <td>Rs.3000 for full day</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Jeep</td>
+        <td>Rs.3000 for full day</td>
+        <td>Rs.5000 for full day</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Hiace</td>
+        <td>Rs.3200 for full day</td>
+        <td>Rs.4500 for full day</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Tourist Bus</td>
+        <td>Rs.3700 for full day</td>
+        <td>Rs.5000 for full day</td>
+    </tr>
+
+</table>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Travel Space</h3>
+          <p>A travel space is an online platform offering 
+            travel planning, bookings, destination guides, and personalized trip options, with features like interactive maps, secure payments, reviews, and travel tips for a seamless experience.
+          </p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul type="bullet">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Packages</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-column">
+          <h3>More Links</h3>
+          <ul type="bullet">
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Hotel Reservation</a></li>
+            <li><a href="#">Guides</a></li>
+           
+          </ul>
+        </div>
+  
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Partners</a></li>
+          </ul>
+         <div class="footer-social">
+    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+    <a href="#"><img src="google.png" alt="Google"></a>
+    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+    <a href="#"><img src="twitter.png" alt="Twitter"></a>
+  </div>
+          <a href="#" class="footer-btn">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2019-2020 All Rights Reserved.
+      </div>
+    </footer>
+</body>
+</html>
+

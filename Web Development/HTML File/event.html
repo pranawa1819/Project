@@ -1,0 +1,754 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <title>Packages</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Gwendolyn:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    body {
+
+      background-image: url('img5.jpg');
+      background-repeat: no-repeat;
+      background-size: 1920px 7080px;
+
+    }
+
+    nav {
+      overflow: visible;
+      /* Changed from hidden to visible */
+      border: 5px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      margin-top: 50px;
+
+    }
+
+    .nav-center {
+      margin-left: 50%;
+      display: flex;
+      position: relative;
+      align-items: center;
+      /* Added alignment */
+    }
+
+    .nav-right {
+
+      display: flex;
+
+    }
+
+    .nav-center a,
+    .nav-right a {
+      color: rgb(10, 10, 10);
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-family: 'Dancing Script';
+      font-size: 30px;
+      display: block;
+      /* Added display block */
+      position: relative;
+    }
+
+    .nav-center a::after,
+    .nav-right a::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      /* Adjust the position to place the line under the text */
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: black;
+      /* Color of the line */
+      transition: width 0.3s ease-in-out;
+      /* Smooth animation for the line */
+    }
+
+    .nav-center a:hover::after,
+    .nav-right a:hover::after {
+      width: 100%;
+      /* The line expands fully on hover */
+    }
+
+
+
+    .logocontainer {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 5px;
+      width: fit-content;
+      margin-top: -70px;
+    }
+
+    #logo {
+      height: 70px;
+      width: 70px;
+      margin-right: 10px;
+    }
+
+    #firstheader {
+      font-family: 'Gwendolyn';
+      color: black;
+      font-size: 40px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    #image {
+      display: block;
+      width: 700px;
+      height: 550px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-left: 50%;
+      margin-top: -20%;
+    }
+
+
+
+    /* General styles for the grid container */
+    .destination-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      margin-left: 6%;
+      margin-right: auto;
+    }
+
+    /* Individual grid item styling */
+    .destination-item {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 85%;
+    }
+
+    .destination-item img {
+      width: 100%;
+      height: 70%;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .destination-item h3 {
+      margin: 10px 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .destination-item p {
+      padding: 0 10px 10px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Hero section adjustments for better layout */
+    .hero-image {
+      max-height: 500px;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+    }
+
+    .img2 {
+      height: 90%;
+      align-items: center;
+    }
+
+    .hero-content {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .destination-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 6px;
+      margin-left: 45%;
+      /* To align the grid to the right */
+    }
+
+    .image-grid1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 6px;
+      margin-right: 40%;
+      /* To align the grid to the right */
+      margin-left: 5%;
+    }
+
+    .image {
+      width: 80%;
+      height: 80%;
+    }
+
+    /* Container for button */
+    .rafting-container {
+
+      /* Aligns the content to the left */
+      margin-left: 10%;
+      /* Adjusts the container's position from the left edge */
+      margin-top: -30%;
+      display: inline-block;
+    }
+
+    .rafting-container1,
+    .rafting-container2,
+    .rafting-container3 {
+      margin-bottom: 20px;
+      /* Adds space between each container */
+
+    }
+
+    .activity-container {
+
+      /* Aligns the content to the left */
+      margin-left: 75%;
+      /* Adjusts the container's position from the left edge */
+      margin-top: -30%;
+      display: inline-block;
+
+    }
+
+    .activity-container1,
+    .activity-container2,
+    .activity-container3,
+    .activity-container4,
+    .activity-container5 {
+      margin-bottom: 20px;
+      /* Adds space between each container */
+    }
+
+    /* Button Styles */
+    .button-style {
+      display: inline-block;
+      padding: 15px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      /* Subtle shadow for depth */
+      width: 80%;
+      text-align: center;
+    }
+
+    /* swip csss*/
+
+    .swiper-container {
+      width: 100%;
+      height: 500px;
+      position: relative;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+        /* Footer Styling */
+  
+
+        footer {
+          background-color: #000;
+          padding: 40px 20px;
+          margin-top: 10%;
+        }
+    
+        .footer-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+    
+        .footer-column {
+          flex: 1 1 200px;
+          margin: 10px;
+        }
+    
+        .footer-column h3 {
+          margin-bottom: 20px;
+          font-size: 18px;
+          color: #fff;
+        }
+    
+        .footer-column p {
+          margin-bottom: 20px;
+          font-size: 14px;
+          color: #ccc;
+          line-height: 1.6;
+        }
+    
+        .footer-column ul {
+          list-style: none;
+        }
+    
+        .footer-column ul li {
+          margin-bottom: 10px;
+        }
+    
+        .footer-column ul li a {
+          text-decoration: none;
+          color: #ccc;
+          font-size: 14px;
+          transition: color 0.3s;
+        }
+    
+        .footer-column ul li a:hover {
+          color: #fff;
+        }
+    
+        .footer-social {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 20px;
+        }
+        .footer-btn {
+          display: inline-block;
+          padding: 10px 20px;
+          background: #e91e63;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 20px;
+          transition: background 0.3s;
+          margin-top: 10%;
+          margin-left: 20%;
+        }
+    
+        .footer-btn:hover {
+          background: #c2185b;
+        }
+    
+        .footer-bottom {
+          text-align: center;
+          margin-top: 20px;
+          font-size: 14px;
+          color: #666;
+        }
+    
+        .footer-social img {
+          width: 35px; /* Set width */
+          height: 35px; /* Set height (equal to width for a square) */
+          border-radius: 50%; /* Makes it circular */
+          object-fit: cover; /* Crops the image to fit within the circle */
+          display: inline-block; /* Ensures proper alignment */
+          margin: 0 10px; /* Adds spacing between the icons */
+          border: 2px solid #fff; /* Optional: Add a border around the image for a polished look */
+          overflow: hidden; /* Ensures any overflow is hidden */
+        }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-center">
+      <a href="Home.html">Home</a>
+      <a href="Services.html">Services</a>
+      <a href="Package.html">Packages</a>
+      <a href="Gallery.html">Gallery</a>
+
+      <a href="Contact.html">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="Booking.html">Booking</a>
+    </div>
+  </nav>
+
+  <div class="logocontainer">
+    <img src="logo.png" alt="logoshere" id="logo">
+    <h1 id="firstheader">Hike Space</h1>
+  </div>
+
+
+
+  <main>
+    <section class="hero">
+      <div class="swiper-container hero-image">
+        <div class="swiper-wrapper">
+          <!-- Add slides with images -->
+          <div class="swiper-slide">
+            <img src="janakpur.webp" alt="Image 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="illam.jpg" alt="Image 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="mt.jpg" alt="Image 3">
+          </div>
+        </div>
+        <!-- Pagination and Navigation Buttons -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <div class="hero-content">
+        <h2 style="font-family:'Rubaile';; font-size:45px;">Welcome </h2>
+        <p style="font-family: 'Montserrat';
+     font-size: 18px;
+     color: #555;">Uncover breathtaking destinations and craft unforgettable journeys for your next adventure! </p>
+      </div>
+    </section>
+
+    <!-- best destination-->
+    <section id="destination" class="destination">
+      <h2 style=" margin-left:10%; font-family:'Rubaile'; font-size:45px;"> Top Destination and Offers</h2>
+      <div class="destination-grid">
+        <a href="chitwan.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="chitwan.jpg" alt="" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px; ">Chitwan</h3>
+            <h4 style="font-family: 'Montserrat';
+            font-size: 18px;
+            color: #555;">Trip Duration: 3 days</h4>
+          </div>
+        </a>
+
+        <a href="pokhara.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="pokhara.jpg" alt="image" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Pokhara</h3>
+            <h4 style="font-family: 'Montserrat';
+            font-size: 18px;
+            color: #555;">Trip Duration: 4 days</h4>
+          </div>
+        </a>
+
+        <a href="kusma.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="kusma.jpg" alt="image" class="image3" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;"> Kusma Baglung</h3>
+            <h4 style="font-family: 'Montserrat';
+            font-size: 18px;
+            color: #555;">Trip Duration: 6 days</h4>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section id="destination" class="destination">
+      <div class="destination-grid">
+
+        <a href="kusma.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="muktinath.jpg" alt="image" class="image3" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Muktinath</h3>
+            <h4 style="font-family: 'Montserrat';
+         font-size: 18px;
+         color: #555;">Trip Duration: 7 days</h4>
+          </div>
+        </a>
+
+        <a href="Lumbini.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="lumbini.jpg" alt="image" class="image3" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Lumbini</h3>
+            <h4 style="font-family: 'Montserrat';
+          font-size: 18px;
+          color: #555;">Trip Duration: 4 days</h4>
+          </div>
+        </a>
+
+        <a href="bandipur.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="bandipur.jpg" alt="image" class="image3" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Bandipur</h3>
+            <h4 style="font-family: 'Montserrat';
+          font-size: 18px;
+          color: #555;">Trip Duration: 3 days</h4>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- feature trekking  -->
+    <section id="hotels" class="destination">
+      <h2 style="margin-left: 10%; font-family:'Rubaile'; font-size:45px;"> Top Trekking Destination</h2>
+      <div class="destination-grid">
+
+        <a href="annapurna.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="annapurna.webp" alt="image" class="image3" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Annapurna Base Camp</h3>
+          </div>
+        </a>
+
+        <a href="rara.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="rara.jpg" alt="image" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Rara Lake</h3>
+          </div>
+        </a>
+
+        <a href="gosaikunda.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="Gosaikunda.jpg" alt="image" class="image3" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Gosaikunda</h3>
+          </div>
+        </a>
+      </div>
+
+    </section>
+    <section id="hotels" class="destination">
+      <div class="destination-grid">
+
+        <a href="tilicho.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="tilicho.jpg" alt="image" class="image3" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Tilicho</h3>
+
+          </div>
+        </a>
+
+        <a href="shey.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="shey.jpeg" alt="image" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Shey-Phoksundo</h3>
+          </div>
+        </a>
+
+        <a href="langtang.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="langtang.jpeg" alt="image" class="image3" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Langtang</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- Day Hiking  -->
+    <section id="destination" class="destination">
+      <h2 style=" margin-left:10%;font-family:'Rubaile'; font-size:45px;"> Day Hiking</h2>
+      <div class="destination-grid">
+
+        <a href="shivapuri.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="Shivapuri.jpg" alt="" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Shivapuri Hiking</h3>
+            <h4 style="font-family: 'Montserrat';
+        font-size: 18px;
+        color: #555;">Trip Duration: 1 days</h4>
+          </div>
+        </a>
+
+        <a href="jamacho.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="jamacho.jpeg" alt="image" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Jamcho Gumba</h3>
+            <h4 style="font-family: 'Montserrat';
+        font-size: 18px;
+        color: #555;">Trip Duration: 1 days</h4>
+
+          </div>
+        </a>
+
+        <a href="Dhapdam.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="dhapdam.jpeg" alt="image" class="image3" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Dhapdam</h3>
+            <h4 style="font-family: 'Montserrat';
+        font-size: 18px;
+        color: #555;">Trip Duration: 1 days</h4>
+          </div>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- jungle safari  -->
+    <section id="destination" class="destination">
+      <h2 style=" margin-left:10%;font-family:'Rubaile'; font-size:45px;"> Jungle Safari</h2>
+      <div class="destination-grid">
+
+        <a href="chitwan.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="safari.jpg" alt="" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Chitwan Safari</h3>
+            <h4 style="font-family: 'Montserrat';
+        font-size: 18px;
+        color: #555;">Trip Duration: 3 days</h4>
+
+          </div>
+        </a>
+
+        <a href="koshi.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="koshi.webp" alt="image" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;">Koshi Tapu Wildlife Reserve</h3>
+            <h4 style="font-family: 'Montserrat';
+        font-size: 18px;
+        color: #555;">Trip Duration: 3 days</h4>
+          </div>
+        </a>
+
+        <a href="royal.html" style="text-decoration: none; color: inherit;">
+          <div class="destination-item">
+            <img src="royal.jpg" alt="image" class="image3" />
+            <h3 style="font-family:'Hello Baby Karl Sans'; font-size:30px;"> Royal Bardiya National Park Tour</h3>
+            <h4 style="font-family: 'Montserrat';
+        font-size: 18px;
+        color: #555;">Trip Duration: 6 days</h4>
+          </div>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- rafting  -->
+
+    <h2 style="margin-left: 10%; font-family:'Rubaile'; font-size:45px;">Rafting In Nepal</h2>
+    <div class="image-grid">
+      <img src="image1.webp" alt="image 1" class="image" />
+      <img src="image2.jpg" alt="image 2" class="image" />
+      <img src="image3.jpg" alt="image 3" class="image" />
+      <img src="image4.jpg" alt="image 4" class="image" />
+    </div>
+    <div class="rafting-container">
+      <div class="rafting-container1">
+        <a href="explore.html" class="button-style">Bhotekhoshi Rafting</a>
+      </div>
+
+      <div class="rafting-container2">
+        <a href="explore.html" class="button-style">Kaligandaki Rafting</a>
+      </div>
+
+      <div class="rafting-container3">
+        <a href="explore.html" class="button-style">Trishuli</a>
+      </div>
+    </div>
+    <!-- activities -->
+
+    <h2 style="margin-left: 10%; font-family:'Rubaile'; font-size:45px;">Choose Activities</h2>
+    <div class="image-grid1">
+      <img src="activity1.jpg" alt="image 1" class="image" />
+      <img src="activity2.jpg" alt="image 2" class="image" />
+      <img src="activity3.jpeg" alt="image 3" class="image" />
+      <img src="activity4.jpg" alt="image 4" class="image" />
+    </div>
+    <div class="activity-container">
+      <div class="activity-container1">
+        <a href="explore.html" class="button-style">Bunjee Jumping</a>
+      </div>
+
+      <div class="activity-container2">
+        <a href="explore.html" class="button-style">Paragliding</a>
+      </div>
+
+      <div class="activity-container3">
+        <a href="explore.html" class="button-style">Bird Watching/ sight seeing</a>
+      </div>
+      <div class="activity-container4">
+        <a href="explore.html" class="button-style">Cultural Tours</a>
+      </div>
+      <div class="activity-container5">
+        <a href="explore.html" class="button-style">Zip-Lining</a>
+      </div>
+    </div>
+
+  </main>
+  <script src="https://kit.fontawesome.com/2b1a947830.js" crossorigin="anonymous"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true, // Enables infinite looping
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Travel Space</h3>
+        <p>A travel space is an online platform offering 
+          travel planning, bookings, destination guides, and personalized trip options, with features like interactive maps, secure payments, reviews, and travel tips for a seamless experience.
+        </p>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul type="bullet">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Packages</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>More Links</h3>
+        <ul type="bullet">
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Hotel Reservation</a></li>
+          <li><a href="#">Guides</a></li>
+         
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Partners</a></li>
+        </ul>
+       <div class="footer-social">
+  <a href="#"><img src="facebook.png" alt="Facebook"></a>
+  <a href="#"><img src="google.png" alt="Google"></a>
+  <a href="#"><img src="instagram.png" alt="Instagram"></a>
+  <a href="#"><img src="twitter.png" alt="Twitter"></a>
+</div>
+        <a href="#" class="footer-btn">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2019-2020 All Rights Reserved.
+    </div>
+  </footer>
+</body>
+
+</html>
